@@ -9,7 +9,7 @@ using EstoqueEntityModel;
 using System.ServiceModel.Activation;
 
 
-namespace ServicoEstoque {
+namespace EstoqueProduto {
 
     // WCF service that implements the service contract
     // This implementation performs minimal error checking and exception handling
