@@ -20,20 +20,20 @@ namespace EstoqueProduto {
         [OperationContract]
         int ConsultarEstoque(string numeroProduto);
         [OperationContract]
-        int AdicionarEstoque(string numeroProduto, int quantidade);
+        bool AdicionarEstoque(string numeroProduto, int quantidade);
         [OperationContract]
-        int RemoverEstoque(string numeroProduto, int quantidade);
+        bool RemoverEstoque(string numeroProduto, int quantidade);
         [OperationContract]
-        Produto verProduto(string numeroProduto);
+        Produto VerProduto(string numeroProduto);
     }
 
 
     [ServiceContract(Namespace = "http://projetoavaliativo.dm113/02", Name = "IServicoEstoqueV2")]
     public interface IServicoEstoqueV2 {
         [OperationContract]
-        int AdicionarEstoque(string numeroProduto, int quantidade);
+        bool AdicionarEstoque(string numeroProduto, int quantidade);
         [OperationContract]
-        int RemoverEstoque(string numeroProduto, int quantidade);
+        bool RemoverEstoque(string numeroProduto, int quantidade);
         [OperationContract]
         int ConsultarEstoque(string numeroProduto);
     }
@@ -52,4 +52,5 @@ namespace EstoqueProduto {
         [DataMember(Order = 3)]
         public int EstoqueProduto;
     }
-}
+}
+
