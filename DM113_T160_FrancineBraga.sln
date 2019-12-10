@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueEntityModel", "Estoq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicoEstoque", "ServicoEstoque\ServicoEstoque.csproj", "{2C5E48A4-0B88-4DB6-86BC-8ECC0D068A7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueLibrary", "EstoqueLibrary\EstoqueLibrary.csproj", "{DD54C013-2203-475A-97D8-C6750E7FA029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2C5E48A4-0B88-4DB6-86BC-8ECC0D068A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C5E48A4-0B88-4DB6-86BC-8ECC0D068A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C5E48A4-0B88-4DB6-86BC-8ECC0D068A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD54C013-2203-475A-97D8-C6750E7FA029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD54C013-2203-475A-97D8-C6750E7FA029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD54C013-2203-475A-97D8-C6750E7FA029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD54C013-2203-475A-97D8-C6750E7FA029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
