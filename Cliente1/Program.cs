@@ -10,7 +10,7 @@ namespace Cliente1 {
     class Program {
         static void Main(string[] args) {
             // Create a proxy object and connect to the service
-            ServicoEstoqueClient proxy = new ServicoEstoqueClient();
+            ServicoEstoqueClient proxy = new ServicoEstoqueClient("BasicHttpBinding_IServicoEstoque");
 
             // Test the operations in the service
             Console.WriteLine("Cliente 1");
@@ -56,7 +56,9 @@ namespace Cliente1 {
             Console.WriteLine("Nome do produto: {0}", produto.NomeProduto);
             Console.WriteLine("Descrição do produto: {0}", produto.DescricaoProduto);
             Console.WriteLine("Estoque de produto: {0}", produto.EstoqueProduto);
-            Console.WriteLine();            Console.WriteLine("Teste 5: Adicionar estoque para produto 2");
+            Console.WriteLine();
+
+            Console.WriteLine("Teste 5: Adicionar estoque para produto 2");
             sucesso = proxy.AdicionarEstoque("2000", 10);
             if (sucesso) {
                 Console.WriteLine("Estoque adicionado com sucesso!");
@@ -73,7 +75,9 @@ namespace Cliente1 {
             Console.WriteLine("Teste 7: Verificar estoque do produto 1");
             estoque = proxy.ConsultarEstoque("1000");
             Console.WriteLine("Estoque do produto 1: {0}", estoque);
-            Console.WriteLine();            Console.WriteLine("Teste 8: Remover estoque para produto 1");
+            Console.WriteLine();
+
+            Console.WriteLine("Teste 8: Remover estoque para produto 1");
             sucesso = proxy.RemoverEstoque("1000", 20);
             if (sucesso) {
                 Console.WriteLine("Estoque removido com sucesso!");
@@ -93,7 +97,8 @@ namespace Cliente1 {
             Console.WriteLine("Nome do produto: {0}", produto.NomeProduto);
             Console.WriteLine("Descrição do produto: {0}", produto.DescricaoProduto);
             Console.WriteLine("Estoque de produto: {0}", produto.EstoqueProduto);
-            Console.WriteLine();
+            Console.WriteLine();
+
             // Disconnect from the service
             proxy.Close();
             Console.WriteLine("Press ENTER to finish");

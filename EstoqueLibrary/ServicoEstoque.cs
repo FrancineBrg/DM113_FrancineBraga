@@ -92,7 +92,6 @@ namespace EstoqueProduto {
                     ProdutoEstoque produtoEstoque = database.ProdutoEstoques.First(
                         p => String.Compare(p.NumeroProduto, numeroProduto) == 0);
                     produtoEstoque.EstoqueProduto = produtoEstoque.EstoqueProduto + quantidade;
-                    database.ProdutoEstoques.Add(produtoEstoque);
                     database.SaveChanges();
                 }
             } catch {
@@ -108,7 +107,6 @@ namespace EstoqueProduto {
                     ProdutoEstoque produtoEstoque = database.ProdutoEstoques.First(
                         p => String.Compare(p.NumeroProduto, numeroProduto) == 0);
                     produtoEstoque.EstoqueProduto = produtoEstoque.EstoqueProduto - quantidade;
-                    database.ProdutoEstoques.Add(produtoEstoque);
                     database.SaveChanges();
                 }
             } catch {

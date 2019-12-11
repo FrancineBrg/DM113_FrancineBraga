@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Net.Security;
 
 namespace EstoqueProduto {
 
@@ -29,11 +30,11 @@ namespace EstoqueProduto {
 
     [ServiceContract(Namespace = "http://projetoavaliativo.dm113/02", Name = "IServicoEstoqueV2")]
     public interface IServicoEstoqueV2 {
-        [OperationContract]
+        [OperationContract(ProtectionLevel = ProtectionLevel.EncryptAndSign)]
         bool AdicionarEstoque(string numeroProduto, int quantidade);
-        [OperationContract]
+        [OperationContract(ProtectionLevel = ProtectionLevel.EncryptAndSign)]
         bool RemoverEstoque(string numeroProduto, int quantidade);
-        [OperationContract]
+        [OperationContract(ProtectionLevel = ProtectionLevel.EncryptAndSign)]
         int ConsultarEstoque(string numeroProduto);
     }
 
