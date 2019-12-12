@@ -9,6 +9,9 @@ using Cliente1.ServicoEstoque;
 namespace Cliente1 {
     class Program {
         static void Main(string[] args) {
+            Console.WriteLine("Pressione ENTER quando o serviço for iniciado");
+            Console.ReadLine();
+
             // Create a proxy object and connect to the service
             ServicoEstoqueClient proxy = new ServicoEstoqueClient("BasicHttpBinding_IServicoEstoque");
 

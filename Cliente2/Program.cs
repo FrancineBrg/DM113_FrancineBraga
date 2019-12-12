@@ -9,6 +9,9 @@ using Cliente2.ServicoEstoqueV2;
 namespace Cliente2 {
     class Program {
         static void Main(string[] args) {
+            Console.WriteLine("Pressione ENTER quando o serviço for iniciado");
+            Console.ReadLine();
+
             // Create a proxy object and connect to the service
             ServicoEstoqueV2Client proxy = new ServicoEstoqueV2Client("WS2007HttpBinding_IServicoEstoque");
 
