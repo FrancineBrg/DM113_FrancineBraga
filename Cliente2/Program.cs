@@ -15,6 +15,9 @@ namespace Cliente2 {
             // Create a proxy object and connect to the service
             ServicoEstoqueV2Client proxy = new ServicoEstoqueV2Client("WS2007HttpBinding_IServicoEstoque");
 
+            // Test the operations in the service
+            Console.WriteLine("Cliente 2");
+            Console.WriteLine();
             Console.WriteLine("Teste 1: Verificar estoque do produto 1");
             int estoque = proxy.ConsultarEstoque("1000");
             Console.WriteLine("Estoque do produto 1: {0}", estoque);

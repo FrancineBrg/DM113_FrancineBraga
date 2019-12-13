@@ -12,9 +12,9 @@ namespace ProvedorEstoqueHost {
         static void Main(string[] args) {
             ServiceHost servicoEstoqueHost = new ServiceHost(typeof(ServicoEstoque));
             servicoEstoqueHost.Open();
-            Console.WriteLine("Service Running");
+            Console.WriteLine("Serviço Ativado");
             Console.ReadLine();
-            Console.WriteLine("Service Stopping");
+            Console.WriteLine("Desativando Serviço");
             servicoEstoqueHost.Close();
         }
     }
